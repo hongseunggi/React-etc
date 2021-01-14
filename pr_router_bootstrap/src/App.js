@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter,Route,Link,Switch} from 'react-router-dom';
 import Rooms from './Rooms'
+import Button from 'react-bootstrap/Button';
 
 class App extends Component {
 
@@ -9,9 +10,9 @@ class App extends Component {
     return (
       <BrowserRouter>
           <div style={{padding:20, border:'5px solid gray'}}>
-            <Link to = "/">홈</Link><br/>
-            <Link to = "/photo">사진</Link><br/>
-            <Link to = "/rooms">방 소개</Link><br/>
+            <Link to = "/"><Button variant="outline-info">홈</Button></Link>{' '}
+            <Link to = "/photo"><Button variant="outline-info">사진</Button></Link>{' '}
+            <Link to = "/rooms"><Button variant="outline-info">방 소개</Button></Link>{' '}
             <Switch>
               <Route exact path = "/" component = {Home}/>
               <Route path = "/photo" component = {Photo}/>
